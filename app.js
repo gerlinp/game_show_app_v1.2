@@ -14,7 +14,10 @@ reset.addEventListener('click', () => {
     overlay.style.display = 'none';
 });
 
-
+function getRandomPhraseAsArray(arr) { // Selecting a random phrase
+    let random = Math.floor(Math.random() * arr.length);
+    return phrases[random];
+};
 
 
 
