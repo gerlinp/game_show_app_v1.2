@@ -10,6 +10,12 @@ let phrases = [
     'Just keep swimming',
     'To infinity and beyond' 
 ];
+reset.addEventListener('click', () => {
+    overlay.style.display = 'none';
+});
+
+
+
 
 
 
