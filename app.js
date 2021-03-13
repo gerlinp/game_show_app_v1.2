@@ -35,22 +35,25 @@ function addPhraseToDisplay(array) { // Set random phrase chose to be displayed
     }
 };
 
-// ❏ Create a checkLetter function
-// ❏ Create a function “stub” for the checkLetter function
-function checkLetter(btn) {
-// ❏ Include a parameter in the function head for the button that gets clicked
-// ❏ Store all of the li elements in a variable inside checkLetter
-    let checkLetter = addPhraseToDisplay(getRandomPhraseAsArray(phrases));
-    console.log(checkLetter)
-// ❏ Create a variable to store if a match is found and give it an initial value of null
-// ❏ Loop through all of the li elements. Remember: arrays start with index 0!
-// ❏ Create a conditional that compares the text of the button parameter to
-// the text of the li at the current index of the loop
-// ❏ If they match, add the “show” class to the li
-// ❏ If they match, store the button text in the match variable
-
-// ❏ Once the loop completes, return the match variable
-
+// Create a checkLetter function
+// Create a function “stub” for the checkLetter function
+// Include a parameter in the function head for the button that gets clicked
+function checkLetter(arr) {
+// Store all of the li elements in a variable inside checkLetter
+    let randomPhrase = addPhraseToDisplay(getRandomPhraseAsArray(phrases));
+// Create a variable to store if a match is found and give it an initial value of null
+    let match = [];
+// Loop through all of the li elements. Remember: arrays start with index 0!
+    for (i = 0; i < randomPhrase.length; i++) {
+        // Create a conditional that compares the text of the button parameter to the text of the li at the current index of the loop
+        if (arr === randomPhrase.textContent) {
+        // If they match, add the “show” class to the li
+            randomPhrase.className = show    
+        // If they match, store the button text in the match variable
+            match.push(randomPhrase.textContent);
+        }
+    }
+    return match;
 }
 
 addPhraseToDisplay(getRandomPhraseAsArray(phrases));
