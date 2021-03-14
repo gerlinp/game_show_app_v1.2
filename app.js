@@ -21,10 +21,10 @@ function getRandomPhraseAsArray(arr) { // Selecting a random phrase
 };
 
 
-function addPhraseToDisplay(array) { // Set random phrase chose to be displayed
-    for (i = 0; i < array.length; i++) {    
+function addPhraseToDisplay() { // Set random phrase chose to be displayed
+    for (i = 0; i < getRandomPhraseAsArray(phrases).length; i++) {    
         let li = document.createElement('li');
-        li.textContent = array[i];
+        li.textContent = getRandomPhraseAsArray(phrases)[i];
 
         if (li.textContent === ' ') {
             li.className = 'space';
@@ -35,12 +35,12 @@ function addPhraseToDisplay(array) { // Set random phrase chose to be displayed
     }
 };
 
+
 // Create a checkLetter function
 // Create a function “stub” for the checkLetter function
 // Include a parameter in the function head for the button that gets clicked
-function checkLetter(arr) {
+function checkLetter() {
 // Store all of the li elements in a variable inside checkLetter
-    let randomPhrase = addPhraseToDisplay(getRandomPhraseAsArray(phrases));
 // Create a variable to store if a match is found and give it an initial value of null
     let match = [];
 // Loop through all of the li elements. Remember: arrays start with index 0!
@@ -56,7 +56,7 @@ function checkLetter(arr) {
     return match;
 }
 
-addPhraseToDisplay(getRandomPhraseAsArray(phrases));
+
 
 
 
