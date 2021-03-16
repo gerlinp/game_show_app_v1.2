@@ -70,10 +70,14 @@ startButton.addEventListener('click', () => {
         addPhraseToDisplay(answer);
 });
 
+<<<<<<< HEAD
 function fadeOut() {
     const overlay = document.querySelector('#overlay');
     startButton.style.opacity = '0';
 }
+=======
+
+>>>>>>> parent of aba8b41 (Update app.js)
 
 
 // listen for the onscreen keyboard to be clicked
