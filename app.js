@@ -70,10 +70,7 @@ startButton.addEventListener('click', () => {
         addPhraseToDisplay(answer);
 });
 
-function fadeOut() {
-    const overlay = document.querySelector('#overlay');
-    startButton.style.opacity = '0';
-}
+
 
 
 // listen for the onscreen keyboard to be clicked
