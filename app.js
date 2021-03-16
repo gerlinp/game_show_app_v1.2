@@ -33,6 +33,7 @@ const addPhraseToDisplay =  arr => {
     }
 };
 
+addPhraseToDisplay(answer);
 
 // check if a ltter is in the phrase
 const checkLetter = button => {
@@ -66,12 +67,9 @@ const checkWin = () => {
 
 // listen for the start game button to be pressed
 startButton.addEventListener('click', () => {
-        overlay.style.opacity = '0';
-        addPhraseToDisplay(answer);
+    overlay.style.opacity = '0'    
+    overlay.style.display = 'none';
 });
-
-
-
 
 // listen for the onscreen keyboard to be clicked
 qwerty.addEventListener('click', e => {
