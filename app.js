@@ -32,7 +32,7 @@ const addPhraseToDisplay =  arr => {
         };
     }
 };
-addPhraseToDisplay(answer);
+
 
 // check if a ltter is in the phrase
 const checkLetter = button => {
@@ -51,9 +51,7 @@ const checkLetter = button => {
 // check if the game has been won or lost
 const checkWin = () => {
     let letter = document.querySelectorAll('.letter');
-    console.log(letter);
     let show = document.querySelectorAll('.show');
-    console.log(show);
     if (letter.length === show.length) {
         overlay.classList.add('win');
         overlay.style.display = 'flex'
@@ -68,8 +66,15 @@ const checkWin = () => {
 
 // listen for the start game button to be pressed
 startButton.addEventListener('click', () => {
-        overlay.style.display = 'none';
+        overlay.style.opacity = '0';
+        addPhraseToDisplay(answer);
 });
+
+function fadeOut() {
+    const overlay = document.querySelector('#overlay');
+    startButton.style.opacity = '0';
+}
+
 
 // listen for the onscreen keyboard to be clicked
 qwerty.addEventListener('click', e => {
@@ -85,3 +90,5 @@ qwerty.addEventListener('click', e => {
         }
     } checkWin();
 });
+
+
