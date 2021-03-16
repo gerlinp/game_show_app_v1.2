@@ -96,6 +96,7 @@ button {
 .show {
   color: #000;
   background-color: #76CE82;
+  transition: 1s;
 }
 
 /* Keyboard */
@@ -112,12 +113,17 @@ button {
   color: #FFFFFF;
 }
 
-.btn__reset {
+.btn__reset,
+.btn_restart {
   padding: 8px;
   margin: 50px auto;
   background: #FFFFFF;
   border-radius: 5px;
   font-size: var(--font-size-medium);
+}
+
+.btn_restart {
+  display: none;
 }
 
 /* Overlay */

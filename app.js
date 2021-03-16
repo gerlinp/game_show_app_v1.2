@@ -3,6 +3,7 @@ const phrase = document.querySelector('#phrase');
 const startButton = document.querySelector('.btn__reset');
 let miss = 0;
 let title = document.querySelector('.title')
+let displayedAnswer = ''
 const phrases = [
     'May the Force be with you',
     'Theres no place like home',
@@ -14,7 +15,8 @@ const phrases = [
 // return a random phrase from an array
 const getRandomPhraseArray = arr => {
     let random = Math.floor(Math.random() * arr.length);
-    let answer = phrases[random].split('');
+    let answer = arr[random].split('');
+    displayedAnswer = arr[random];
     return answer;
 }   
 let answer = getRandomPhraseArray(phrases);
@@ -33,6 +35,7 @@ const addPhraseToDisplay =  arr => {
     }
 };
 
+addPhraseToDisplay(answer);
 
 // check if a ltter is in the phrase
 const checkLetter = button => {
@@ -54,31 +57,34 @@ const checkWin = () => {
     let show = document.querySelectorAll('.show');
     if (letter.length === show.length) {
         overlay.classList.add('win');
+        startGame.style.display = 'none'
+        playAgain.style.display = 'flex'
         overlay.style.display = 'flex'
+        title.innerText = `Sucess!
+        The answer was: 
+        "${displayedAnswer}"`
     } else if ( miss > 4 ) {
         overlay.classList.add('lose');
+        startGame.style.display = 'none'
+        playAgain.style.display = 'flex'
         overlay.style.display = 'flex'
         title.innerText = 'Ran out of lives'
-
     }
-    
 }
+
+const startGame = document.querySelector('.btn__reset');
+const playAgain = document.querySelector('.btn_restart');
+
+
+
+
+
+
 
 // listen for the start game button to be pressed
 startButton.addEventListener('click', () => {
-        overlay.style.opacity = '0';
-        addPhraseToDisplay(answer);
+        overlay.style.display = 'none';
 });
-
-<<<<<<< HEAD
-function fadeOut() {
-    const overlay = document.querySelector('#overlay');
-    startButton.style.opacity = '0';
-}
-=======
-
->>>>>>> parent of aba8b41 (Update app.js)
-
 
 // listen for the onscreen keyboard to be clicked
 qwerty.addEventListener('click', e => {
