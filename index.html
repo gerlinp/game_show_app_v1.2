@@ -2,47 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Wheel of Success!</title>
+    <title>Hack the Planet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles.css" rel="stylesheet">
   </head>
-  <body>
-    <div class="main-container">
+  <body class="viewport-header">
+    <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+      <source src="images/greendots.mp4" type="video/mp4">
+    </video>
+    <div class="main-container viewport-header">
       <div id="overlay" class="start">
-        <h2 class="title">Wheel of Success</h2>
-        <a class="btn__reset">Start Game</a>
-        <a class="btn_restart" onClick="window.location.reload();">Play again</a>
-      </div>
-
-      <div id="banner" class="section">
-        <h2 class="header">Wheel of Success</h2>
-      </div>
-
-      <div id="phrase" class="section">
-        <ul></ul>
-      </div>
-      <div id="qwerty" class="section">
-        <div class="keyrow">
-          <button>q</button><button>w</button><button>e</button><button>r</button><button>t</button><button>y</button><button>u</button><button>i</button><button>o</button><button>p</button>
+        <canvas>
+        </canvas>
+        <div id=startScreen>
+          <div id="black">
+          <h2 class="title">Hack the Planet</h2>
+          <div>
+            <h1>CRACK THE CODE</h1><a class="btn__reset">Start Game</a>
+          </div>
+          <a class="btn_restart" onClick="window.location.reload();">Play again</a>
         </div>
-        <div class="keyrow">
-          <button>a</button><button>s</button><button>d</button><button>f</button><button>g</button><button>h</button><button>j</button><button>k</button><button>l</button>
-        </div>
-        <div class="keyrow">
-          <button>z</button><button>x</button><button>c</button><button>v</button><button>b</button><button>n</button><button>m</button>
         </div>
       </div>
 
-      <div id="scoreboard" class="section">
-        <ol>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-        </ol>
+      <div id="black2">
+        <div id="banner" class="section">
+          <h2 class="header">Hack the Planet</h2>
+        </div>
+        <div id="phrase" class="section">
+          <ul></ul>
+        </div>
+        <div id="qwerty" class="section">
+          <div class="keyrow">
+            <button>q</button><button>w</button><button>e</button><button>r</button><button>t</button><button>y</button><button>u</button><button>i</button><button>o</button><button>p</button>
+          </div>
+          <div class="keyrow">
+            <button>a</button><button>s</button><button>d</button><button>f</button><button>g</button><button>h</button><button>j</button><button>k</button><button>l</button>
+          </div>
+          <div class="keyrow">
+            <button>z</button><button>x</button><button>c</button><button>v</button><button>b</button><button>n</button><button>m</button>
+          </div>
+        </div>
+        <div id="scoreboard" class="section">
+          <ol>
+            <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+            <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+            <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+            <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+            <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+          </ol>
+        </div>
       </div>
+
+
     </div>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
+
+
+

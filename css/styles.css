@@ -42,6 +42,7 @@ h2 {
   margin: 0;
 }
 
+
 button {
   margin: 6px;
   border: 1px solid transparent;
@@ -72,7 +73,7 @@ button {
 /* Title */
 
 .header {
-  color: var(--color-start);
+  color: green;
 }
 
 /* Phrase */
@@ -147,7 +148,7 @@ button {
 }
 
 .start {
-  background-color: var(--color-start);
+  background-color: black;
 }
 
 .start a {
@@ -170,5 +171,61 @@ button {
   color: var(--color-lose);
 }
 
+canvas {
+  z-index: 1;
+  width: 100%; 
+  height: 100%;
+}
+
+#startScreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  top: 40%;
+  z-index: 2;
+}
+#black {
+  font-family: HelveticaNeue;
+  width:50%;
+  margin: 0 auto;
+  border: green 10px solid;
+  padding: 20px;
+
+}
+
+#black,
+#black2 {
+  background: rgba(0, 0, 0, 0.9);
+  border: green 10px solid;
+  
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.viewport-header {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* position: fixed;
+width: 500px;
+height: 200px;
+top: 50%;
+left: 50%;
+margin-top: -100px; 
+margin-left: -250px;  */
 
 
